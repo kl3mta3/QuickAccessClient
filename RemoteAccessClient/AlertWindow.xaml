@@ -1,0 +1,98 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="Alert1" mc:Ignorable="av" x:Class="ClientQuickAccess.AlertWindow"
+    Title="Report Issue"
+    Height="296" Width="332"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    Background="Transparent" WindowStartupLocation="CenterOwner">
+
+    <Border CornerRadius="9" Background="WhiteSmoke" BorderBrush="#DDD" BorderThickness="1">
+        <Grid ClipToBounds="True" Margin="0,0,0,-1">
+
+            <Border CornerRadius="9,9,0,0" Height="24" VerticalAlignment="Top">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#eff9df" Offset="0"/>
+
+                        <GradientStop Color="#FFF3F3F3" Offset="1"/>
+
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid MouseDown="TitleBar_MouseDown" Margin="0,0,0,3" Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <TextBlock
+        Text="Client Quick Assist"
+        VerticalAlignment="Center"
+        Margin="11,0,266,0"
+        Foreground="Black"/>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="269,0,75,0">
+                        <Button Content="—" Width="27" Height="22" Margin="0,0,5,0" Click="Minimize_Click" Foreground="#FF919191" Background="#000B5ED7" BorderBrush="#00707070" FontFamily="Arial"/>
+                        <Button Content="X" Width="26" Height="20" Click="Close_Click" Background="#00C80707" Foreground="#FF919191" BorderBrush="#00707070" FontFamily="Arial"/>
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+
+            <Grid x:Name="ReportIssue" Margin="0,40,0,0">
+                <Label x:Name="lbl_ClientList" Content="Report an Issue with the Client Connection" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#FF5B5B5B" Margin="0,15,0,0"/>
+                <StackPanel Margin="30,0,30,0" VerticalAlignment="Center" Orientation="Vertical">
+                    <TextBlock Text="Brief Description" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txb_Description"
+             Height="80"
+             TextWrapping="Wrap"
+             AcceptsReturn="True"
+             VerticalScrollBarVisibility="Auto"/>
+
+                    <TextBlock Text="Name" FontWeight="SemiBold"/>
+                    <TextBox x:Name="txb_Name" Height="30"/>
+
+                </StackPanel>
+                <Button x:Name="btn_SendAlert"
+        Content="Send"
+        HorizontalAlignment="Center"
+        Margin="0,206,0,0"
+        VerticalAlignment="Top"
+        Height="26"
+        Width="74"
+        FontWeight="Bold"
+        FontSize="18"
+        Foreground="White" Click="btn_SendAlert_Click" Background="#FF19B672">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF0B5ED7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border CornerRadius="10"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              RecognizesAccessKey="True"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label x:Name="lbl_ClientName" Content="Client Name" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="#FF5B5B5B" Margin="0,-12,0,0"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
