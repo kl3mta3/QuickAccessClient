@@ -3,11 +3,11 @@ using System.Text.Json;
 using System.Security.Cryptography;
 using System.Text;
 using System.IO;
-using ClientQuickAccess;
+using QuickAccessClient;
 
 
 
-namespace ClientQuickAccess.Config
+namespace QuickAccessClient.Config
 {
     public class Config
     {

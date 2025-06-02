@@ -14,9 +14,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using static ClientQuickAccess.MainWindow;
+using static QuickAccessClient.MainWindow;
 
-namespace ClientQuickAccess
+namespace QuickAccessClient
 {
     /// <summary>
     /// Interaction logic for Alert.xaml

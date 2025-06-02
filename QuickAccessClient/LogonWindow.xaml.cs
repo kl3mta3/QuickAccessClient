@@ -13,12 +13,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ClientQuickAccess.Classes;
-using ClientQuickAccess.Config;
-using static ClientQuickAccess.MainWindow;
-using ClientQuickAccess.Properties;
+using QuickAccessClient.Classes;
+using QuickAccessClient.Config;
+using static QuickAccessClient.MainWindow;
+using QuickAccessClient.Properties;
 
-namespace ClientQuickAccess
+namespace QuickAccessClient
 {
     /// <summary>
     /// Interaction logic for LogonWindow.xaml

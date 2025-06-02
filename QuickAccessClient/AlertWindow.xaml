@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="Alert1" mc:Ignorable="av" x:Class="ClientQuickAccess.AlertWindow"
+    x:Name="Alert1" mc:Ignorable="av" x:Class="QuickAccessClient.AlertWindow"
     Title="Report Issue"
     Height="296" Width="332"
     WindowStyle="None"
@@ -34,7 +34,7 @@
 
 
                     <TextBlock
-        Text="Client Quick Assist"
+        Text="Client Quick Client"
         VerticalAlignment="Center"
         Margin="11,0,266,0"
         Foreground="Black"/>
