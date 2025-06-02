@@ -57,13 +57,6 @@ The client offers a streamlined, secure way to interact with the portal from a u
 
 ---
 
-## TODO
-
-- Add auto-launch at startup (optional toggle)
-- Encrypt stored username locally
-- Better error display for invalid certs or unreachable hosts
-
----
 
 ## Security Notes
 
