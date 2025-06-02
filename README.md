@@ -39,13 +39,25 @@ The client offers a streamlined, secure way to interact with the portal from a u
 ## Structure
 
 - `LogonWindow.xaml` – Login form with username, password, and "Remember me" checkbox
+
+ 
+  ![Logon Preview](https://raw.githubusercontent.com/kl3mta3/QuickAccessClient/master/img/logon_window.png)
+
 - `Config.cs` – Contains hash logic (`SHA512`) and helper methods
 - `Settings.settings` – Persists saved username across app restarts
 - `Logon_Click` – Sends hashed username/password + API key to server for verification
 - `MainWindow` – Provides Client List and access to Info
+
+ 
+   ![Main Preview](https://raw.githubusercontent.com/kl3mta3/QuickAccessClient/master/img/main_window.png)
+
+
 - `Go To KBA` – Goes to the stored URL
 - `Open RDP` – Opens the remote Application based on path and arguments provided.
 - `Report Issue` – Sends a report of an Issue with a Remote to the Quick Access Portal and Dashboard.
+
+  
+   ![Alert Preview](https://raw.githubusercontent.com/kl3mta3/QuickAccessClient/master/img/report_issue.png)
 
 ---
 
