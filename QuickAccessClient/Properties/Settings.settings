@@ -8,5 +8,8 @@
     <Setting Name="RememberUsername" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="ServerUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1:6000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
