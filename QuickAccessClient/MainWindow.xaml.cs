@@ -66,15 +66,23 @@ namespace QuickAccessClient
             {
                 await Config.Config.ConfigureApplication();
 
-
-                LogonWindow loginWindow = new LogonWindow();
-                loginWindow.Owner = this;
-                loginWindow.Show();
-                this.Hide();
-                while (!LoggedIn)
+                if(Config.Config.useLogin)
                 {
-                    await Task.Delay(100); 
+                    LogonWindow loginWindow = new LogonWindow();
+                    loginWindow.Owner = this;
+                    loginWindow.Show();
+                    this.Hide();
+                    while (!LoggedIn)
+                    {
+                        await Task.Delay(100);
+                    }
                 }
+                else
+                {
+                    await UpdateComboBox();
+                }
+
+
 
             }
             catch (Exception ex)
@@ -220,6 +228,12 @@ namespace QuickAccessClient
                 var exe = parts[0];
                 var args = parts.Length > 1 ? parts[1] : "";
 
+                if (exe.Contains("chrome", StringComparison.OrdinalIgnoreCase) ||
+                    exe.Contains("edge", StringComparison.OrdinalIgnoreCase))
+                {
+                    args = " --incognito " + args;
+                }
+
                 if (!File.Exists(exe))
                 {
                     MessageBox.Show($"Executable not found: {exe}");
@@ -232,6 +246,8 @@ namespace QuickAccessClient
                     Arguments = args,
                     UseShellExecute = true
                 });
+
+                Console.WriteLine($"Opening remote location: {exe} {args}");
             }
             catch (Exception ex)
             {

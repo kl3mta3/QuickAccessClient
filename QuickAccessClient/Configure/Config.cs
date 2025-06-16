@@ -13,7 +13,8 @@ namespace QuickAccessClient.Config
     {
        // internal static string ConfigFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "client.config");
         internal static string LogFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "log.txt");
-
+        internal static bool useLogin= false;
+      
         internal static string Username { get; set; }
         internal static byte[] AdminPassword { get; set; }
 
@@ -70,5 +71,6 @@ namespace QuickAccessClient.Config
     {
         public string ServerURL { get; set; }
         public int ServerPort { get; set; }
+        public bool UseLogin { get; set; }
     }
 }
